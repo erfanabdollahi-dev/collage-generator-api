@@ -1,0 +1,87 @@
+# Dependencies
+node_modules/
+jspm_packages/
+bower_components/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Build output
+dist/
+build/
+out/
+.next/
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+.nyc_output/
+
+# Caches
+.cache/
+.npm/
+.yarn/
+.eslintcache
+.node_repl_history
+.grunt/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Optional: TypeScript
+*.tsbuildinfo
+
+# Optional: Prisma (if using)
+prisma/migrations/dev.db
+prisma/*.db
+prisma/*.db-journal
+
+# Optional: Uploads folder (if storing user uploads locally)
+uploads/
+public/uploads/
+tmp/
+temp/
+
+# Optional: PM2
+.pm2/

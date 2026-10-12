@@ -1,14 +1,9 @@
-class CollageService {
-  async createJob(jobData: {
-    borderSize: number;
-    borderColor: string;
-    direction: "horizontal" | "vertical";
-  }) {
+import type { CreateCollageJobInput } from "./collage.types.js";
 
-    return {id: "123", status : "pending", ...jobData}
-    
+class CollageService {
+  async createJob(jobData: CreateCollageJobInput) {
+    return { id: "123", status: "pending", ...jobData };
   }
 }
 
-
-export default new CollageService;
+export default new CollageService();

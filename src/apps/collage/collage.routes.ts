@@ -1,8 +1,10 @@
-import express from "express"  
-import { createJob } from "./collage.controller.js"
+import express from "express";
+import { validateMiddleware } from "../middlewares/validate.middleware.js";
+import { createJob } from "./collage.controller.js";
+import { createCollageJobSchema } from "./collage.validation.js";
 
-const router = express.Router()
+const router = express.Router();
 
-router.post("/jobs", createJob)
+router.post("/jobs", validateMiddleware(createCollageJobSchema), createJob);
 
-export default router
+export default router;

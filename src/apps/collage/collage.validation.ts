@@ -1,5 +1,5 @@
 import z from "zod"
-export const createCollageJobSchema = z.object({
+export const createCollageJobSchema = z.strictObject({
   borderSize: z
     .number()
     .int()

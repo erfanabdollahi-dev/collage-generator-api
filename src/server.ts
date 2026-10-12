@@ -1,8 +1,11 @@
 import app from "./app.js";
+import env from "./config/env.js";
+
 
 const bootstrap = () => {
-  app.listen(3000, () => {
-    console.log(`Server is listening on http://127.0.0.1:3000`);
+  const PORT = env.PORT
+  app.listen(PORT, () => {
+    console.log(`Server is listening on http://127.0.0.1:${PORT}`);
   });
 };
 

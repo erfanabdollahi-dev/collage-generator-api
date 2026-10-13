@@ -1,4 +1,3 @@
-
 import type { z } from "zod";
 import type { createCollageJobSchema } from "./collage.validation.js";
 
@@ -17,9 +16,7 @@ export type CollageJob = {
 };
 
 // The validated settings received from the client.
-export type CreateCollageJobInput = z.infer<
-  typeof createCollageJobSchema
->;
+export type CreateCollageJobInput = z.infer<typeof createCollageJobSchema>;
 
 // The complete data our service prepares for database creation.
 export type CreateCollageJobRecord = {
@@ -30,4 +27,14 @@ export type CreateCollageJobRecord = {
   images: string[];
   resultKey: string | null;
   error: string | null;
+};
+
+export type ImageToUpload = {
+  buffer: Buffer;
+  format: string;
+};
+
+export type CreateCollageJobData = {
+  settings: CreateCollageJobInput;
+  images: ImageToUpload[];
 };

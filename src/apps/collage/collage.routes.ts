@@ -12,4 +12,5 @@ router.post(
   collageController.createJob,
 );
 
+router.get("/jobs/:id", collageController.getJobById)
 export default router;

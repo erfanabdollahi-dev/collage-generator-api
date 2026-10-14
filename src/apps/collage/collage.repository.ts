@@ -22,6 +22,12 @@ class CollageRepository {
     const job = await CollageJobModel.create(data);
     return this.toCollageJob(job);
   }
+
+  async findCollageJobById(id: string): Promise<CollageJob | null> {
+    const job = await CollageJobModel.findById(id);
+    if (!job) return null;
+    return this.toCollageJob(job);
+  }
 }
 
 export default new CollageRepository();

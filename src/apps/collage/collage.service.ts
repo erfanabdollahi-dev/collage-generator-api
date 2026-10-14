@@ -1,6 +1,7 @@
 import storageService from "../../services/storage.service.js";
 import collageRepository from "./collage.repository.js";
 import type {
+  CollageJob,
   CreateCollageJobInput,
   CreateCollageJobRecord,
   ImageToUpload,
@@ -18,6 +19,11 @@ class CollageService {
     };
     const job = await collageRepository.createCollageJob(data);
 
+    return job;
+  }
+
+  async findCollageJobById(id: string): Promise<CollageJob | null> {
+    const job = await collageRepository.findCollageJobById(id);
     return job;
   }
 }
